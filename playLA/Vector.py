@@ -49,6 +49,13 @@ class Vector:
         """返回数量乘法的结果向量：self*k"""
         return Vector(k*e for e in self)
 
+    def dot(self, another):
+        """点乘向量，返回结果标量"""
+        assert len(self) == len(another), \
+            "Error in dot product. Length of vector must be same."
+        return sum(a * b for a,b in zip(self,another))
+
+
     def __rmul__(self, k):
         """返回数量乘法的结果向量：k*self"""
         return self*k
@@ -70,4 +77,6 @@ class Vector:
         """返回向量的迭代器"""
         """测试注释"""
         return self._values.__iter__()
+
+
 

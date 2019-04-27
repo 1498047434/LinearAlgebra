@@ -37,6 +37,9 @@ if __name__ == "__main__":
         zero2.normalize()
     except ZeroDivisionError:
         print("Cannot normalize zero vector {}".format(zero2))
+
     # print("normalize {} is {}".format(zero2, zero2.normalize()))
     # print(zero2.normalize().norm())
+
+    print(vec.dot(vec2))
 
